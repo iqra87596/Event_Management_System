@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 class EventManagementController extends Controller
@@ -20,4 +19,6 @@ class EventManagementController extends Controller
     {
         return view('contact');
     }
+
 }
+

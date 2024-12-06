@@ -13,7 +13,7 @@
 </div>
 
 <h1 class="display-4 fst-italic text-center menu-header">
-    <i><b>EVENT DETAILS</b></i>
+    <i><b><u>EVENT DETAILS</u></b></i>
 </h1>
 
 <div class="container my-5">
@@ -136,6 +136,7 @@
         </div>
     </div>
 </div>
-
 </div>
+
+
 @endsection

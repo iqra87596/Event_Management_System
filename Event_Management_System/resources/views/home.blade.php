@@ -3,20 +3,58 @@
 @section('title', 'Home')
 
 @section('content')
-<div class="container my-5">
-    <!-- Image with overlay text -->
-    <div class="custom-image-container">
-        <img src="{{ asset('images/L2.jpg') }}" alt="Welcome Image" class="img-fluid custom-image">
+<div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-12 px-0 position-relative">
+        <img src="{{ asset('images/L2.jpg') }}" alt="Description of image" class="img-fluid custom-image" />
         <div class="overlay-text">
-            <b><i>WELCOME TO THE EVENT MANAGEMENT SYSTEM</i></b>
-            <br>
-            <a class="btn btn-primary btn-lg" href="{{ route('products') }}" role="button">Explore Events</a>
+            <h1><b><i>WELCOME TO THE EVENT MANAGEMENT SYSTEM</i></b></h1>
         </div>
     </div>
 </div>
+<h1 class="display-4 fst-italic text-center menu-header">
+    <i><b><u>EVENT LIST</u></b></i>
+</h1>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Search for Events...">
+    </div> 
+
+    <div class="col-md-3">
+        <select class="form-control">
+            <option value="">Event Category</option>
+            <option value="New Year's Eve Party">New Year's Eve Party</option>
+            <option value="Birthday Party">Birthday Party</option>
+            <option value="Midnight Feast">Midnight Feast</option>
+            <option value="Friendsgiving">Friendsgiving</option>
+            <option value="Wedding Reception">Wedding Reception</option>
+            <option value="Beach Party">Beach Party</option>
+           <option value="Tea Party">Tea Party</option>
+            <option value="Bachelor Party">Bachelor Party</option>
+            <option value="Musical Night">Musical Night</option>
+        </select>
+    </div>
+
+    <div class="col-md-3">
+        <select class="form-control">
+            <option value="">Location</option>
+            <option value="London">United Kingdom</option>
+<option value="Tokyo">Japan</option>
+<option value="Berlin">Germany</option>
+<option value="Moscow">Russia</option>
+<option value="Sydney">Australia</option>
+<option value="Mumbai">India</option>
+<option value="Cairo">Egypt</option>
+<option value="Rio de Janeiro">Brazil</option>
+<option value="Cape Town">South Africa</option>
+<option value="Seoul">South Korea</option>
+        </select>
+    </div>
+</div>
+
 
 <div class="container my-5">
-    <h2 class="text-center mb-4">Events List</h2>
+    
     <div class="row row-cols-1 row-cols-md-3 g-4">
         
    <!-- New Year's Eve Party -->
@@ -131,4 +169,8 @@
 
     </div>
 </div>
+
+
+
 @endsection
+

@@ -25,8 +25,6 @@
     border-radius: 5px; /* Rounded corners */
 }
 
-
-
 .navbar {
     background-color: rgb(199, 123, 183); /* Navbar background color */
     padding: 10px 20px; /* Smaller padding for a more compact navbar */
@@ -111,15 +109,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white; /* Change the text color */
-    
+    color: white; /* Change the text color */   
     padding: 20px; /* Space around the text */
     border-radius: 5px; /* Optional: rounded corners */
 }
 
 /* Order details styles */
 .order-details {
-    background-color:#78154c; /* Brand text color */
+    background-color:#3e0069; /* Brand text color */
     ; /* Dark blue background */
     padding: 20px; /* Space inside the div */
     border-radius: 5px; /* Rounded corners */
@@ -130,7 +127,7 @@
 /* Menu header styles */
 .menu-header {
     border: 5px solid #78154c; /* Blue border */
-    background-color: rgb(199, 123, 183); /* Light blue background */
+    background-color: #3e0069; /* Light blue background */
     padding: 15px; /* Space inside the header */
     border-radius: 10px; /* Rounded corners */
     margin-bottom: 20px; /* Space below the header */
