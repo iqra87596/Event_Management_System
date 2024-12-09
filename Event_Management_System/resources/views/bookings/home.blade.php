@@ -8,4 +8,7 @@
     <p>Book events seamlessly and manage your bookings with ease.</p>
     <a href="{{ route('bookings.index') }}" class="btn btn-primary">Manage Event Bookings</a>
 </div>
+<br>
+
+
 @endsection

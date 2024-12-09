@@ -10,6 +10,7 @@ class CreateEventBookingsTable extends Migration
     {
         Schema::create('event_bookings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->string('event_name');
             $table->string('user_name');
             $table->string('email');

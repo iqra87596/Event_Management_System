@@ -10,6 +10,11 @@ class EventBooking extends Model
     use HasFactory;
 
     protected $fillable = [
-        'event_name', 'user_name', 'email', 'phone', 'booking_date', 'status'
+        'event_name', 'user_name', 'email', 'phone', 'booking_date', 'status', 'category_id'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

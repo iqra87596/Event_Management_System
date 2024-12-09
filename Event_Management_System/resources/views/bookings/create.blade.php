@@ -4,7 +4,8 @@
 
 @section('content')
 <div class="container">
-    <h1>Create Event Booking</h1>
+  
+    <h1><b><u>reate Event Booking</u></b></h1>
 
     @if ($errors->any())
         <div class="alert alert-danger">
