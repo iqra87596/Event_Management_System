@@ -9,11 +9,10 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['event_name', 'event_description'];
+    protected $fillable = ['event_name', 'event_description', 'event_image'];
 
     public function eventBookings()
     {
         return $this->hasMany(EventBooking::class);
     }
 }
-

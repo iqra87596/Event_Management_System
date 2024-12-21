@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class AddCategoryIdToEventBookingsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::table('event_bookings', function (Blueprint $table) {
@@ -19,11 +14,6 @@ class AddCategoryIdToEventBookingsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::table('event_bookings', function (Blueprint $table) {

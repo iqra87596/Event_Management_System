@@ -22,7 +22,7 @@
 <div class="row mb-4">
     <div class="col-md-6">
         <input type="text" class="form-control" placeholder="Search for Events...">
-    </div> 
+     </div> 
 
     <div class="col-md-3">
         <select class="form-control">
@@ -36,9 +36,11 @@
            <option value="Tea Party">Tea Party</option>
             <option value="Bachelor Party">Bachelor Party</option>
             <option value="Musical Night">Musical Night</option>
+            <option value="Diwali Delight">Diwali Delight</option>
+            <option value="Christmas Cheer">Christmas Cheer</option>
         </select>
     </div>
-
+     
     <div class="col-md-3">
         <select class="form-control">
             <option value="">Location</option>
@@ -52,6 +54,7 @@
             <option value="Rio de Janeiro">Brazil</option>
             <option value="Cape Town">South Africa</option>
             <option value="Seoul">South Korea</option>
+            
         </select>
     </div>
 </div>
@@ -90,5 +93,7 @@
 <div class="container mt-5">
     <a href="{{ route('bookings.index') }}" class="btn btn-primary">Manage Event Bookings</a>
     <a href="{{ route('categories.index') }}" class="btn btn-secondary">Manage Categories</a>
+    <br>
+    <br>
 </div>
 @endsection
