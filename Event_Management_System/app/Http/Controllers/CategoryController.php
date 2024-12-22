@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 
@@ -8,10 +8,19 @@ use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $categories = Category::all();
-        return view('categories.index', compact('categories'));
+        $query = $request->input('search');
+        $categories = Category::query();
+
+        if ($query) {
+            $categories = $categories->where('event_name', 'like', '%' . $query . '%')
+                                     ->orWhere('event_description', 'like', '%' . $query . '%');
+        }
+
+        $categories = $categories->paginate();
+
+        return view('categories.index', compact('categories', 'query'));
     }
 
     public function create()
@@ -59,6 +68,7 @@ class CategoryController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('event_image')) {
+            // Delete old event-image if it exists
             if ($category->event_image) {
                 Storage::disk('public')->delete($category->event_image);
             }
@@ -71,6 +81,7 @@ class CategoryController extends Controller
 
     public function destroy(Category $category)
     {
+        // Delete event-image file if it exists
         if ($category->event_image) {
             Storage::disk('public')->delete($category->event_image);
         }
@@ -78,20 +89,5 @@ class CategoryController extends Controller
         $category->delete();
         \DB::statement('ALTER TABLE categories AUTO_INCREMENT = 1');
         return redirect()->route('categories.index')->with('success', 'Category deleted successfully!');
-    }
-
-    public function search(Request $request)
-    {
-        $searchTerm = $request->input('term', '');
-
-        if (!empty($searchTerm)) {
-            $categories = Category::where('event_name', 'like', '%' . $searchTerm . '%')
-                ->orWhere('event_description', 'like', '%' . $searchTerm . '%')
-                ->get();
-        } else {
-            $categories = Category::all(); // Return all if search term is empty
-        }
-
-        return response()->json($categories);
     }
 }

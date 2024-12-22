@@ -136,6 +136,51 @@
         </div>
     </div>
 </div>
+ <!-- Diwali Delight -->
+ <div class="row featurette">
+    <div class="col-md-7 order-md-1">
+        <h2 class="featurette-heading fw-normal lh-1"><b><i>Diwali Delight </i></b></h2>
+        <p class="lead"><b><u>About:</u></b> Stag & Co in Las Vegas designs high-energy Diwali Delight parties filled with thrilling activities.</p>
+        <p><b><u>Highlights:</u></b> Exclusive club access, private tours, sports, and entertainment.</p>
+        <p><b><u>Unique Touch:</u></b> Customizable experiences, VIP access, and themed party favors.</p>
+        <p><b><u>Highlights:</u></b> Exclusive club access, private tours, sports, and entertainment.</p>
+        <p><b><u>Unique Touch:</u></b> Customizable experiences, VIP access, and themed party favors.</p>
+        <p><b><u>Highlights:</u></b> Exclusive club access, private tours, sports, and entertainment.</p>
+    </div>
+    <div class="col-md-5 order-md-2">
+        <img src="{{ asset('images/Diwali Delight.jpg') }}" class="featurette-image img-fluid mx-auto" alt="Diwali Delight" width="400" height="400">
+    </div>
+</div>
+<!-- Christmas Cheer -->
+<div class="row featurette">
+    <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1"><b><i>Christmas Cheer by SoundWave Productions</i></b></h2>
+        <p class="lead"><b><u>About:</u></b> SoundWave Productions creates vibrant Christmas Cheer that entertain and engage.</p>
+        <p><b><u>Highlights:</u></b> Multi-genre bands, DJs, food trucks, and interactive installations.</p>
+        <p><b><u>Unique Touch:</u></b> Themed stages, “Silent Disco” events, and colorful fireworks displays.</p>
+        <p><b><u>Highlights:</u></b> Exclusive club access, private tours, sports, and entertainment.</p>
+        <p><b><u>Unique Touch:</u></b> Customizable experiences, VIP access, and themed party favors.</p>
+        <p><b><u>Highlights:</u></b> Exclusive club access, private tours, sports, and entertainment.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+        <img src="{{ asset('images/Christmas Cheer.jpg') }}" class="featurette-image img-fluid mx-auto" alt="Christmas Cheer" width="400" height="400">
+    </div>
+</div>
+<!-- Spring Bloom Festival -->
+<div class="row featurette">
+    <div class="col-md-7 order-md-1">
+        <h2 class="featurette-heading fw-normal lh-1"><b><i>Spring Bloom Festival </i></b></h2>
+        <p class="lead"><b><u>About:</u></b> Stag & Co in Las Vegas designs high-energy Spring Bloom Festival parties filled with thrilling activities.</p>
+        <p><b><u>Highlights:</u></b> Exclusive club access, private tours, sports, and entertainment.</p>
+        <p><b><u>Unique Touch:</u></b> Customizable experiences, VIP access, and themed party favors.</p>
+        <p><b><u>Highlights:</u></b> Exclusive club access, private tours, sports, and entertainment.</p>
+        <p><b><u>Unique Touch:</u></b> Customizable experiences, VIP access, and themed party favors.</p>
+        <p><b><u>Highlights:</u></b> Exclusive club access, private tours, sports, and entertainment.</p>
+    </div>
+    <div class="col-md-5 order-md-2">
+        <img src="{{ asset('images/Spring Bloom Festival.jpg') }}" class="featurette-image img-fluid mx-auto" alt="Spring Bloom Festival" width="400" height="400">
+    </div>
+</div>
 </div>
 
 

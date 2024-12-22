@@ -22,7 +22,7 @@
 <div class="row mb-4">
     <div class="col-md-6">
         <input type="text" class="form-control" placeholder="Search for Events...">
-     </div> 
+    </div> 
 
     <div class="col-md-3">
         <select class="form-control">
@@ -33,7 +33,7 @@
             <option value="Friendsgiving">Friendsgiving</option>
             <option value="Wedding Reception">Wedding Reception</option>
             <option value="Beach Party">Beach Party</option>
-           <option value="Tea Party">Tea Party</option>
+            <option value="Tea Party">Tea Party</option>
             <option value="Bachelor Party">Bachelor Party</option>
             <option value="Musical Night">Musical Night</option>
             <option value="Diwali Delight">Diwali Delight</option>
@@ -54,7 +54,6 @@
             <option value="Rio de Janeiro">Brazil</option>
             <option value="Cape Town">South Africa</option>
             <option value="Seoul">South Korea</option>
-            
         </select>
     </div>
 </div>
@@ -62,8 +61,6 @@
 <!-- Event Cards Section -->
 <div class="container my-5">
     <div class="row row-cols-1 row-cols-md-3 g-4">
-
-        <!-- Event Cards -->
         @foreach ([
             ['title' => "New Year's Eve Party", 'price' => 'Rs. 20,000', 'image' => 'new_year.jpg', 'desc' => 'Celebrate the New Year with an exclusive party atmosphere.'],
             ['title' => 'Birthday Party', 'price' => 'Rs. 2,000', 'image' => 'birthday.jpg', 'desc' => 'Enjoy a fantastic birthday celebration.'],
@@ -74,6 +71,9 @@
             ['title' => 'Tea Party', 'price' => 'Rs. 600', 'image' => 'tea_party.jpg', 'desc' => 'A charming tea gathering.'],
             ['title' => 'Bachelor Party', 'price' => 'Rs. 500', 'image' => 'bachelor_party.jpg', 'desc' => 'Unforgettable bachelor experiences.'],
             ['title' => 'Musical Night', 'price' => 'Rs. 500', 'image' => 'musical_night.jpg', 'desc' => 'Enjoy an evening filled with live music.'],
+            ['title' => 'Diwali Delight', 'price' => 'Rs. 900', 'image' => 'Diwali Delight.jpg', 'desc' => 'Enjoy an evening filled with live Diwali.'],
+            ['title' => 'Christmas Cheer', 'price' => 'Rs. 800', 'image' => 'Christmas Cheer.jpg', 'desc' => 'Enjoy an filled with live Christmas Cheer.'],
+            ['title' => 'Spring Bloom Festival', 'price' => 'Rs. 2000', 'image' => 'Spring Bloom Festival.jpg', 'desc' => 'Enjoy Spring Bloom Festival.'],
         ] as $event)
         <div class="col">
             <div class="card h-100 shadow-sm">
@@ -93,7 +93,16 @@
 <div class="container mt-5">
     <a href="{{ route('bookings.index') }}" class="btn btn-primary">Manage Event Bookings</a>
     <a href="{{ route('categories.index') }}" class="btn btn-secondary">Manage Categories</a>
-    <br>
-    <br>
 </div>
+<br>
+<form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+    @csrf
+    @method('DELETE')
+    <button class="btn btn-danger" type="submit">Logout</button>
+</form>
+@if(Auth::check())
+    <h1>Welcome, {{ Auth::user()->name }}</h1>
+@else
+    <h1>Welcome, Guest</h1>
+@endif
 @endsection

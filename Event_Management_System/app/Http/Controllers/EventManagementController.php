@@ -19,6 +19,6 @@ class EventManagementController extends Controller
     {
         return view('contact');
     }
-
+    
 }
 
