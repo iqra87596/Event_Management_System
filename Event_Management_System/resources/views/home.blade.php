@@ -95,14 +95,4 @@
     <a href="{{ route('categories.index') }}" class="btn btn-secondary">Manage Categories</a>
 </div>
 <br>
-<form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
-    @csrf
-    @method('DELETE')
-    <button class="btn btn-danger" type="submit">Logout</button>
-</form>
-@if(Auth::check())
-    <h1>Welcome, {{ Auth::user()->name }}</h1>
-@else
-    <h1>Welcome, Guest</h1>
-@endif
 @endsection
