@@ -7,7 +7,7 @@
     <div class="col-lg-12 px-0 position-relative">
         <img src="{{ asset('images/L2.jpg') }}" alt="Description of image" class="img-fluid custom-image" />
         <div class="overlay-text">
-            <h1><b><i>WELCOME TO THE EVENT MANAGEMENT SYSTEM</i></b></h1>
+            <h1><b><i><u>WELCOME TO THE EVENT MANAGEMENT SYSTEM</u></i></b></h1>
         </div>
     </div>
 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB; // <-- Add this line
 
 class CategoryController extends Controller
 {
@@ -87,7 +88,7 @@ class CategoryController extends Controller
         }
 
         $category->delete();
-        \DB::statement('ALTER TABLE categories AUTO_INCREMENT = 1');
+        DB::statement('ALTER TABLE categories AUTO_INCREMENT = 1'); // Using the imported DB facade
         return redirect()->route('categories.index')->with('success', 'Category deleted successfully!');
     }
 }

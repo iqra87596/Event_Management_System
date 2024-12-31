@@ -40,3 +40,8 @@ Route::prefix('categories')->group(function () {
 
 // Event Bookings Routes
 Route::resource('bookings', EventBookingController::class); // Manage event bookings
+Route::middleware(['auth'])->group(function () {
+    Route::get('/categories/search', [CategoryController::class, 'search'])->name('search');
+});
+
+
